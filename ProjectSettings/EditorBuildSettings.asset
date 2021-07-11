@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/kinositasyu-tingu.unity
+    guid: f1e7f50654c0546b7a074425ce4f13fd
+  - enabled: 1
+    path: Assets/Scenes/kinositashu-ting2.unity
+    guid: 8d8bb472d99744e2d97c7d74c983db64
+  - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: 8f9e9a6a880934f17b4d12dfcfcd28d1
+  m_configObjects: {}
