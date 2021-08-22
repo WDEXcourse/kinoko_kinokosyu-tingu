@@ -23,12 +23,15 @@ public class PlayerScript : MonoBehaviour
     public GameObject VerRot;
     public GameObject HorRot;
     public GameObject Arrow;
+    public AudioClip sound1;
+    AudioSource audioSource;
     [SerializeField]
     private float ArrowSpeed = 80;
     private Vector3 force;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         characterController = GetComponent<CharacterController>();
     }
 
@@ -38,18 +41,22 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             characterController.Move(this.gameObject.transform.forward * MoveSpeed * Time.deltaTime);
+            audioSource.PlayOneShot(sound1);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             characterController.Move(this.gameObject.transform.forward * -1 * MoveSpeed * Time.deltaTime);
+            audioSource.PlayOneShot(sound1);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             characterController.Move(this.gameObject.transform.right * -1 * MoveSpeed * Time.deltaTime);
+            audioSource.PlayOneShot(sound1);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             characterController.Move(this.gameObject.transform.right * MoveSpeed * Time.deltaTime);
+            audioSource.PlayOneShot(sound1);
         }
         characterController.Move(Velocity * Time.deltaTime);
         Velocity.y += Physics.gravity.y * Time.deltaTime;
