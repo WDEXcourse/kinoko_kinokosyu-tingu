@@ -41,7 +41,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             characterController.Move(this.gameObject.transform.forward * MoveSpeed * Time.deltaTime);
-            audioSource.PlayOneShot(sound1);
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
@@ -58,7 +58,8 @@ public class PlayerScript : MonoBehaviour
             characterController.Move(this.gameObject.transform.right * MoveSpeed * Time.deltaTime);
             audioSource.PlayOneShot(sound1);
         }
-        characterController.Move(Velocity * Time.deltaTime);
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+            characterController.Move(Velocity * Time.deltaTime);
         Velocity.y += Physics.gravity.y * Time.deltaTime;
         if (characterController.isGrounded)
         {
