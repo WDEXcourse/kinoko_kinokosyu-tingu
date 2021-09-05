@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
 
     private CharacterController characterController;
     private Vector3 Velocity;
+    public static int Walk = 68;
     public float sensitivityX = 15f;
     public float sensitivityY = 15f;
     public float minimumX = -360f;
@@ -41,22 +42,22 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             characterController.Move(this.gameObject.transform.forward * MoveSpeed * Time.deltaTime);
-            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             characterController.Move(this.gameObject.transform.forward * -1 * MoveSpeed * Time.deltaTime);
-            audioSource.PlayOneShot(sound1);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             characterController.Move(this.gameObject.transform.right * -1 * MoveSpeed * Time.deltaTime);
-            audioSource.PlayOneShot(sound1);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             characterController.Move(this.gameObject.transform.right * MoveSpeed * Time.deltaTime);
-            audioSource.PlayOneShot(sound1);
+        }
+        if(Input.GetKey(KeyCode.UpArrow)|| Input.GetKey(KeyCode.DownArrow)|| Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.RightArrow))
+        {
+            Walk++;
         }
         //if (Input.GetKeyDown(KeyCode.UpArrow))
             characterController.Move(Velocity * Time.deltaTime);
@@ -84,6 +85,10 @@ public class PlayerScript : MonoBehaviour
              Destroy(Arrows.gameObject, 4);
 
            
+        }
+        if(Walk%70 == 0)
+        {
+            audioSource.PlayOneShot(sound1);
         }
     }
 }
