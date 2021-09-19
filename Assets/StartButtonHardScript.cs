@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButtonScript : MonoBehaviour
+public class StartButtonHardScript : MonoBehaviour
 {
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +18,7 @@ public class StartButtonScript : MonoBehaviour
     }
     public void OnClickStartButton()
     {
+        StartButtonEasyScript.Degreeofdifficulty = 2;
         SceneManager.LoadScene("kinositasyu-tingu");
     }
 }

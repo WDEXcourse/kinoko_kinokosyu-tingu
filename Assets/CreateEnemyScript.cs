@@ -32,5 +32,8 @@ public class CreateEnemyScript : MonoBehaviour
         //PlayerArrowScript.arrow++;
 
     }
-     
+     void strongenemycreat ()
+    {
+
+    }
 }

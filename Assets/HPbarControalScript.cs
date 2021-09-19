@@ -25,18 +25,6 @@ public class HPbarControalScript : MonoBehaviour
         _slider.value = HP;
         Debug.Log(HP);
     }
-    //void OnTregerEnter(Collider collision)
-    //{
-    //    if (collision.gameObject.tag == "tekinoarrow")
-    //  {
-    //        HP -- ;
-    //        Debug.Log(HP);
-    //    }
-    //    if (HP <= 0)
-    //    {
-    //        print("GameOver");
-    //    }
-    //}
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag =="tekinoarrow")
