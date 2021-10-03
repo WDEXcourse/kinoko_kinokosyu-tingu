@@ -22,15 +22,21 @@ public class CreateEnemyScript : MonoBehaviour
     }
     void enemycreat()
     {
-        //PlayerArrowScript.arrow--;
-        for (int x = 0; x < 5; x++)
+        if (StartButtonHardScript.Degreeofdifficulty == 1)
         {
-            Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
-            numberofenemy++;
-        }
-        CountPhaseScript.CountPhase++;
-        //PlayerArrowScript.arrow++;
 
+        }
+        if (StartButtonHardScript.Degreeofdifficulty == 0)
+        {
+            //PlayerArrowScript.arrow--;
+            for (int x = 0; x < 5; x++)
+            {
+                Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                numberofenemy++;
+            }
+            CountPhaseScript.CountPhase++;
+            //PlayerArrowScript.arrow++;
+        }
     }
      void strongenemycreat ()
     {

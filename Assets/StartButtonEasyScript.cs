@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class StartButtonEasyScript : MonoBehaviour
 {
-    public static int Degreeofdifficulty;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        Degreeofdifficulty = 0;
+        
     }
 
     // Update is called once per frame
@@ -21,7 +19,6 @@ public class StartButtonEasyScript : MonoBehaviour
     }
     public void OnClickStartButton()
     {
-        Degreeofdifficulty = 1;
         SceneManager.LoadScene("kinositasyu-tingu");
     }
 }
