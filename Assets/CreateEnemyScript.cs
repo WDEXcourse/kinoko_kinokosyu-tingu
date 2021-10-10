@@ -6,6 +6,8 @@ public class CreateEnemyScript : MonoBehaviour
 {
     public static int numberofenemy;
     public GameObject enemy;
+    public GameObject strongenemy;
+    public GameObject boss; 
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,37 @@ public class CreateEnemyScript : MonoBehaviour
     {
         if (StartButtonHardScript.Degreeofdifficulty == 1)
         {
+            if (CountPhaseScript.CountPhase%10 ==0 && CountPhaseScript.CountPhase >= 1)
+            {
+                for (int x = 0; x < 4; x++)
+                {
+                    Instantiate(strongenemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                    numberofenemy++;
+                }
+                Instantiate(boss, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                numberofenemy++;
+            }
+            else
+            {
+                if (CountPhaseScript.CountPhase % 3 == 0 && CountPhaseScript.CountPhase >= 1)
+                {
+                    for (int x = 0; x < 4; x++)
+                    {
+                        Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                        numberofenemy++;
+                    }
+                    Instantiate(strongenemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                    numberofenemy++;
+                }
+                else
+                {
+                    for (int x = 0; x < 5; x++)
+                    {
+                        Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                        numberofenemy++;
+                    }
+                }
+            }
 
         }
         if (StartButtonHardScript.Degreeofdifficulty == 0)
@@ -34,7 +67,6 @@ public class CreateEnemyScript : MonoBehaviour
                 Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
                 numberofenemy++;
             }
-            CountPhaseScript.CountPhase++;
             //PlayerArrowScript.arrow++;
         }
     }

@@ -7,6 +7,7 @@ public class CountPhaseScript : MonoBehaviour
 {
     public static int CountPhase;
     public Text PhaseText;
+    bool Phasefrag;
 
     // Start is called before the first frame update
     void Start()
@@ -18,5 +19,13 @@ public class CountPhaseScript : MonoBehaviour
     void Update()
     {
         PhaseText.text = "Phase " + CountPhase.ToString();
+        if (CreateEnemyScript.numberofenemy == 0)
+        {
+            Phasefrag = true;
+        }
+        if (Phasefrag == true)
+        {
+            CountPhase++;
+        }
     }
 }
