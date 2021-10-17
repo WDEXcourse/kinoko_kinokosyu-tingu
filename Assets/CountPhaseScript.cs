@@ -19,13 +19,5 @@ public class CountPhaseScript : MonoBehaviour
     void Update()
     {
         PhaseText.text = "Phase " + CountPhase.ToString();
-        if (CreateEnemyScript.numberofenemy == 0)
-        {
-            Phasefrag = true;
-        }
-        if (Phasefrag == true)
-        {
-            CountPhase++;
-        }
     }
 }

@@ -19,6 +19,8 @@ public class CreateEnemyScript : MonoBehaviour
     {
         if (numberofenemy == 0)
         {
+            Debug.Log(numberofenemy);
+            CountPhaseScript.CountPhase++;
             enemycreat();
         }
     }
@@ -28,29 +30,35 @@ public class CreateEnemyScript : MonoBehaviour
         {
             if (CountPhaseScript.CountPhase%10 ==0 && CountPhaseScript.CountPhase >= 1)
             {
-                for (int x = 0; x < 4; x++)
+                for (int x = 0; x < 8; x++)
                 {
                     Instantiate(strongenemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
                     numberofenemy++;
                 }
-                Instantiate(boss, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
-                numberofenemy++;
+                for (int x = 0; x < 2; x++)
+                {
+                    Instantiate(boss, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                    numberofenemy++;
+                }
             }
             else
             {
                 if (CountPhaseScript.CountPhase % 3 == 0 && CountPhaseScript.CountPhase >= 1)
                 {
-                    for (int x = 0; x < 4; x++)
+                    for (int x = 0; x < 7; x++)
                     {
                         Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
                         numberofenemy++;
                     }
-                    Instantiate(strongenemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
-                    numberofenemy++;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        Instantiate(strongenemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
+                        numberofenemy++;
+                    }
                 }
                 else
                 {
-                    for (int x = 0; x < 5; x++)
+                    for (int x = 0; x < 10; x++)
                     {
                         Instantiate(enemy, new Vector3(Random.Range(-25, 51), 24, Random.Range(-51, 210)), Quaternion.identity);
                         numberofenemy++;
