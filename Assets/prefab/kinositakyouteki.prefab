@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 213569421814103639}
   - component: {fileID: 213569421814103638}
   - component: {fileID: 213569421814103633}
+  - component: {fileID: 114980709204550866}
   m_Layer: 0
   m_Name: kinositakyouteki
   m_TagString: Untagged
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213569421967113700}
-  m_LocalRotation: {x: -0, y: -0.96957946, z: -0, w: -0.2447769}
-  m_LocalPosition: {x: -7.43, y: 0, z: -11.73}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.87, y: 24.5, z: -51.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 213569421967073734}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 511.66302, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &213569421814103639
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -63,7 +64,7 @@ CapsuleCollider:
   m_Radius: 1.92
   m_Height: 7.31
   m_Direction: 1
-  m_Center: {x: 0, y: 6.81, z: -0.02}
+  m_Center: {x: -0.03, y: 6.8, z: -0}
 --- !u!195 &213569421814103633
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -73,8 +74,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 213569421967113700}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
+  m_Radius: 3.42
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -82,10 +83,26 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
+  m_Height: 3.62
+  m_BaseOffset: -3.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &114980709204550866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213569421967113700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353e5fe9206c93540afb4c741b924065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  EnemyArrow: {fileID: 724916910911904122, guid: b05cfb2ed492144c285a9a7a0b188c34,
+    type: 3}
+  ArrowSpeed: 1250
 --- !u!1 &213569421967113702
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213569421967113702}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.97, y: -0.61, z: 5.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 213569421967073732}
