@@ -8,6 +8,8 @@ public class StrongEnemyScript : MonoBehaviour
     public GameObject target;
     NavMeshAgent agent;
     public GameObject EnemyArrow;
+    //public GameObject EnemyArrow2;
+    //public GameObject EnemyArrow3;
     [SerializeField]
     private float ArrowSpeed = 1250;
     Vector3 force;
@@ -35,11 +37,18 @@ public class StrongEnemyScript : MonoBehaviour
     }
     void ArrowAttack()
     {
-        GameObject EnemyArrows = Instantiate(EnemyArrow, this.transform.position, this.transform.rotation) as GameObject;
-        EnemyArrows.transform.position = this.transform.position + new Vector3(0, 3, 0);
+        //for (int i = 0; i <= 2; i++) 
+        //{
+        //    float angle = transform.rotation.y;
+        //    angle += 20;
+        //    transform.rotation = Quaternion.Euler(0, angle, 0);
+        //}
+        GameObject EnemyArrows1 = Instantiate(EnemyArrow, transform.position, transform.rotation);
+        GameObject EnemyArrows2 = Instantiate(EnemyArrow, transform.position, transform.rotation);
+        EnemyArrows1.transform.position = this.transform.position + new Vector3(0, 3, 0);
         force = this.gameObject.transform.forward * ArrowSpeed;
-        EnemyArrows.GetComponent<Rigidbody>().AddForce(force);
-        Destroy(EnemyArrows.gameObject, 4);
+        EnemyArrows1.GetComponent<Rigidbody>().AddForce(force);
+        Destroy(EnemyArrows1.gameObject, 4);
 
     }
 }

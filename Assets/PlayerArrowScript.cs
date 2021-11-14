@@ -12,17 +12,10 @@ public class PlayerArrowScript : MonoBehaviour
 
     void Update()
     {
-        //if (arrow == 0)
-        //{
-        //    Destroy(this.gameObject);
-        //}
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //if (collision.gameObject.tag == "enemy")
-        //{
-        //    Destroy(this.gameObject);
-        //}
         if (collision.gameObject.tag == "field")
         {
             Destroy(this.gameObject);
