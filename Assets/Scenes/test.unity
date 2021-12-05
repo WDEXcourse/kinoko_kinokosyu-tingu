@@ -259,6 +259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinositateki
       objectReference: {fileID: 0}
+    - target: {fileID: 3287469159879763600, guid: 3504eccda99aa486d854449311c41f15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3504eccda99aa486d854449311c41f15, type: 3}
 --- !u!1 &1844552588
@@ -426,6 +431,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinositakyouteki
       objectReference: {fileID: 0}
+    - target: {fileID: 213569421967113700, guid: ebe48d4a093871d42b1190434b444953,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe48d4a093871d42b1190434b444953, type: 3}
 --- !u!1 &1887932903
@@ -521,6 +531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: kinokotekinoarrow2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114225280940169216, guid: 400e3db75a6f9f649b97a9c466b22fa9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3114225280940327968, guid: 400e3db75a6f9f649b97a9c466b22fa9,
         type: 3}
@@ -645,6 +660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: kinokotekinoarrow3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166131179571517307, guid: a72508c1998565243a56e99b54bdd271,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72508c1998565243a56e99b54bdd271, type: 3}
