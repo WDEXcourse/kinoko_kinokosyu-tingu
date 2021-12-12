@@ -6,15 +6,27 @@ public class ArrowScript : MonoBehaviour
 {
     public AudioClip sound1;
     AudioSource audioSource;
+    float Speed =1250;
+    AudioSource DIY;
+    Vector3 force;
+    Rigidbody Rigit;
+    
+
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        Rigit = GetComponent<Rigidbody>();
+        force = this.gameObject.transform.forward * Speed;
+        Rigit.AddForce(force);
+        //DIY.GetComponent<Rigidbody>().AddForce(force);
+        Destroy(gameObject, 4);
+
     }
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+       if (Input.GetMouseButton(0))
         {
             audioSource.PlayOneShot(sound1);
         }

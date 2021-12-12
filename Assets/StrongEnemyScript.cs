@@ -27,8 +27,6 @@ public class StrongEnemyScript : MonoBehaviour
     void Update()
     {
         agent.destination = target.transform.position;
-        /////// Arrow(EnemyArrow1, ArrowSpeed,new Vector3(0,3,0),0);
-        ArrowAttack();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -50,9 +48,9 @@ public class StrongEnemyScript : MonoBehaviour
         //force = this.gameObject.transform.forward * ArrowSpeed;
         //EnemyArrows2.GetComponent<Rigidbody>().AddForce(force);
         //Destroy(EnemyArrows2.gameObject, 4);
-        Arrow(EnemyArrow1, ArrowSpeed, new Vector3(0, 3, 0), 0);
-        Arrow(EnemyArrow2, ArrowSpeed, new Vector3(5, 3, 0), 20);
-        Arrow(EnemyArrow3, ArrowSpeed, new Vector3(-5, 3, 0), -20);
+        Arrow(EnemyArrow1, ArrowSpeed, new Vector3(0, 3, 4), 0);
+        Arrow(EnemyArrow2, ArrowSpeed, new Vector3(2, 3, 2), 20);
+        Arrow(EnemyArrow3, ArrowSpeed, new Vector3(-2, 3, 2), -20);
     }
     void Arrow(GameObject DIY, float Speed, Vector3 Position, float Rotate)
     {

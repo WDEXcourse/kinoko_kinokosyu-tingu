@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     NavMeshAgent agent;
     public GameObject EnemyArrow;
     [SerializeField]
-    private float ArrowSpeed = 1250;
+    private float ArrowSpeed = 0;
     Vector3 force;
     // Start is called before the first frame update
     void Start()
