@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6090628395320396401}
   - component: {fileID: 6334590334874374386}
   m_Layer: 0
-  m_Name: kinositakyouteki 1
+  m_Name: kinositakyouteki
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6090628395167353284}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.92
   m_Height: 7.31

@@ -10,18 +10,18 @@ public class ArrowScript : MonoBehaviour
     AudioSource DIY;
     Vector3 force;
     Rigidbody Rigit;
+    public GameObject StrongEnemy;
     
 
 
     void Start()
     {
+        StrongEnemy = GameObject.Find("kinositakyouteki");
         audioSource = GetComponent<AudioSource>();
         Rigit = GetComponent<Rigidbody>();
-        force = this.gameObject.transform.forward * Speed;
+        force = StrongEnemy.transform.forward * Speed;
         Rigit.AddForce(force);
-        //DIY.GetComponent<Rigidbody>().AddForce(force);
         Destroy(gameObject, 4);
-
     }
 
     void Update()
