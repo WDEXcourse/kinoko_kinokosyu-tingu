@@ -21,7 +21,7 @@ public class ArrowScript : MonoBehaviour
         Rigit = GetComponent<Rigidbody>();
         force = StrongEnemy.transform.forward * Speed;
         Rigit.AddForce(force);
-        Destroy(gameObject, 4);
+        Destroy(this.gameObject, 4);
     }
 
     void Update()
