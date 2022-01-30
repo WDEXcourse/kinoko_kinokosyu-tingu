@@ -7,14 +7,14 @@ public class BossEnemyObject : MonoBehaviour
 {
     public GameObject target;
     NavMeshAgent agent;
-    public GameObject EnemyArrow1;
-    public GameObject EnemyArrow2;
-    public GameObject EnemyArrow3;
-    public GameObject EnemyArrow4;
-    public GameObject EnemyArrow5;
-    public GameObject EnemyArrow6;
-    public GameObject EnemyArrow7;
-    public GameObject EnemyArrow8;
+    public GameObject EnemyArrowa;
+    public GameObject EnemyArrowb;
+    public GameObject EnemyArrowc;
+    public GameObject EnemyArrowd;
+    public GameObject EnemyArrowe;
+    public GameObject EnemyArrowf;
+    public GameObject EnemyArrowg;
+    public GameObject EnemyArrowh;
     //public GameObject EnemyArrow2;
     //public GameObject EnemyArrow3;
     [SerializeField]
@@ -44,9 +44,14 @@ public class BossEnemyObject : MonoBehaviour
     }
     void ArrowAttack()
     {
-        GameObject EnemyArrows1 = Instantiate(EnemyArrow1);
-        GameObject EnemyArrows2 = Instantiate(EnemyArrow2);
-        GameObject EnemyArrows3 = Instantiate(EnemyArrow3);
+        GameObject EnemyArrow1 = Instantiate(EnemyArrowa);
+        GameObject EnemyArrow2 = Instantiate(EnemyArrowb);
+        GameObject EnemyArrow3 = Instantiate(EnemyArrowc);
+        GameObject EnemyArrow4 = Instantiate(EnemyArrowd);
+        GameObject EnemyArrow5 = Instantiate(EnemyArrowe);
+        GameObject EnemyArrow6 = Instantiate(EnemyArrowf);
+        GameObject EnemyArrow7 = Instantiate(EnemyArrowg);
+        GameObject EnemyArrow8 = Instantiate(EnemyArrowh);
 
         //EnemyArrows2.transform.rotation = Quaternion.Euler(0, 20, 0);
         //EnemyArrows2.transform.position = this.transform.position + new Vector3(5, 3, 0);
@@ -66,7 +71,7 @@ public class BossEnemyObject : MonoBehaviour
     {
         DIY.transform.position = this.transform.position + Position;
         DIY.transform.rotation = Quaternion.Euler(0, Rotate, 0);
-        force = this.gameObject.transform.forward * Speed;
+        force = DIY.gameObject.transform.forward * Speed;
         DIY.GetComponent<Rigidbody>().AddForce(force);
         Destroy(DIY.gameObject, 4);
     }

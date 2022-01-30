@@ -2,30 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowScript : MonoBehaviour
+public class BossArrowScript : MonoBehaviour
 {
     public AudioClip sound1;
     AudioSource audioSource;
-    float Speed =1250;
+    float Speed = 1250;
     AudioSource DIY;
     Vector3 force;
     Rigidbody Rigit;
-    public GameObject StrongEnemy;
-    
+    public GameObject Boss;
+
 
 
     void Start()
     {
-        StrongEnemy = GameObject.Find("kinositakyouteki (Clone)");
+        Boss = GameObject.Find("kinositaboss(Clone)");
         audioSource = GetComponent<AudioSource>();
-        //transform.Rotate(StrongEnemy.transform.forward);
-        //transform.localEulerAngles = StrongEnemy.transform.forward;
+        transform.Rotate(Boss.transform.forward);
         Rigit = GetComponent<Rigidbody>();
         force = transform.forward * Speed;
         Rigit.AddForce(force);
         Destroy(this.gameObject, 4);
     }
-    
+
     void Update()
     {
         if (Input.GetMouseButton(0))

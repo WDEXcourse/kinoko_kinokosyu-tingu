@@ -7,9 +7,9 @@ public class StrongEnemyScript : MonoBehaviour
 {
     public GameObject target;
     NavMeshAgent agent;
-    public GameObject EnemyArrow1;
-    public GameObject EnemyArrow2;
-    public GameObject EnemyArrow3;
+    public GameObject EnemyArrowa;
+    public GameObject EnemyArrowb;
+    public GameObject EnemyArrowc;
     //public GameObject EnemyArrow2;
     //public GameObject EnemyArrow3;
     [SerializeField]
@@ -39,9 +39,9 @@ public class StrongEnemyScript : MonoBehaviour
     }
     void ArrowAttack()
     {
-        GameObject EnemyArrows1 = Instantiate(EnemyArrow1);
-        GameObject EnemyArrows2 = Instantiate(EnemyArrow2);
-        GameObject EnemyArrows3 = Instantiate(EnemyArrow3);
+        GameObject EnemyArrow1 = Instantiate(EnemyArrowa);
+        GameObject EnemyArrow2 = Instantiate(EnemyArrowb);
+        GameObject EnemyArrow3 = Instantiate(EnemyArrowc);
 
         //EnemyArrows2.transform.rotation = Quaternion.Euler(0, 20, 0);
         //EnemyArrows2.transform.position = this.transform.position + new Vector3(5, 3, 0);
@@ -56,7 +56,7 @@ public class StrongEnemyScript : MonoBehaviour
     {
         DIY.transform.position = this.transform.position + Position;
         DIY.transform.rotation = Quaternion.Euler(0, Rotate, 0);
-        force = this.gameObject.transform.forward * Speed;
+        force = DIY.gameObject.transform.forward * Speed;
         DIY.GetComponent<Rigidbody>().AddForce(force);
         Destroy(DIY.gameObject, 4);
     }   
