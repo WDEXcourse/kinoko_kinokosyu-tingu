@@ -18,6 +18,6 @@ public class CountPhaseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PhaseText.text = "Phase " + CountPhase.ToString();
+        PhaseText.text = CountPhase.ToString();
     }
 }

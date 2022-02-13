@@ -17,6 +17,6 @@ public class CountEnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemyText.text = "Enemy" + CountEnemy.ToString();
+        EnemyText.text = CountEnemy.ToString();
     }
 }
