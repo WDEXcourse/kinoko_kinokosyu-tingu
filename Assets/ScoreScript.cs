@@ -15,6 +15,6 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text = "This time's score__" + CountEnemyScript.CountEnemy;
+        ScoreText.text =  CountEnemyScript.CountEnemy.ToString();
     }
 }
