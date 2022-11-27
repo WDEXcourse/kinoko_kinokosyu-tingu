@@ -36,5 +36,14 @@ public class HPbarControalScript : MonoBehaviour
         {
             print("GameOver");
         }
+        if (collision.gameObject.tag == "ya2")
+        {
+            HP--;
+            Debug.Log(HP);
+        }
+        if (HP <= 0)
+        {
+            print("GameOver");
+        }
     }
 }

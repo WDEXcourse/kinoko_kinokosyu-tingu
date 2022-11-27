@@ -1,21 +1,13 @@
 fileFormatVersion: 2
 guid: 3f8b3a48d759b10438aa835425b07536
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_0
-  - first:
-      213: 21300002
-    second: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_1
-  - first:
-      213: 21300004
-    second: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_2
-  - first:
-      213: 21300006
-    second: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_3
+  fileIDToRecycleName:
+    21300000: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_0
+    21300002: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_1
+    21300004: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_2
+    21300006: vecteezy_wood-button-set-in-cartoon-style-with-cracked-details__ccexpress_3
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -35,7 +27,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -67,15 +58,11 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,7 +73,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -106,7 +92,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 74f9fd9de21489a4185cf413996d4fc1
-      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -127,7 +112,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 20dc084e1b766934fabc7cfc3d7b31f7
-      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -148,7 +132,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ac09c2e951053404287effe696dd4de9
-      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -169,7 +152,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f239905b531196844ac38e21db9d4f09
-      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -178,12 +160,10 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 0bb7c59ff59434b4e9e1cca27a095ca8
-    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

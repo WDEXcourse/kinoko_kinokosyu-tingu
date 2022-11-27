@@ -13,9 +13,9 @@ public class StrongEnemyScript : MonoBehaviour
     public GameObject EnemyArrowa;
     public GameObject EnemyArrowb;
     public GameObject EnemyArrowc;
-    public float Degree, diffusion_angle;
-    float _theta;
-    float PI = Mathf.PI;
+    //public float Degree, diffusion_angle;
+    //float _theta;
+    //float PI = Mathf.PI;
      //public GameObject EnemyArrow2;
      //public GameObject EnemyArrow3;
      [SerializeField]
@@ -48,7 +48,7 @@ public class StrongEnemyScript : MonoBehaviour
         GameObject EnemyArrow1 = Instantiate(EnemyArrowa);
         GameObject EnemyArrow2 = Instantiate(EnemyArrowb);
         GameObject EnemyArrow3 = Instantiate(EnemyArrowc);
-        Debug.Log(501);
+        //Debug.Log(501);
 
         //EnemyArrows2.transform.rotation = Quaternion.Euler(0, 20, 0);
         //EnemyArrows2.transform.position = this.transform.position + new Vector3(5, 3, 0);
