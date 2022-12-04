@@ -15,7 +15,7 @@ public class Straight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MyRotato = GameObject.Find("kinositakyouteki");
+        MyRotato = transform.root.gameObject;
         //target = GameObject.FindGameObjectWithTag("ya2");
     }
 
@@ -32,6 +32,7 @@ public class Straight : MonoBehaviour
         target.transform.localPosition = transform.position;
         target.transform.localRotation = MyRotato.transform.rotation;
         forse = target.transform.forward * m_shotSpeed;
+        Debug.Log(forse);
         targets.GetComponent<Rigidbody>().AddForce(forse);
     }
 }
