@@ -13,6 +13,7 @@ public class Straight : MonoBehaviour
     public float rot;
     public float i;
     Vector3 forse;
+    private Vector3 posi;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Straight : MonoBehaviour
     void Update()
     {
         //target = GameObject.FindGameObjectWithTag("ya2");
+        posi = transform.position;
         m_shotTimer += Time.deltaTime;
         if (m_shotTimer < m_shotInterval) return;
         m_shotTimer = 0;
@@ -43,10 +45,10 @@ public class Straight : MonoBehaviour
     }
     IEnumerator timer()
     {
+        target.transform.localPosition = posi;
+        target.transform.localRotation = MyRotato.transform.rotation;
         GameObject targets = Instantiate(target) as GameObject;
         //targets.transform.position = this.transform.position + new Vector3(0, -3, 0);
-        target.transform.localPosition = transform.position;
-        target.transform.localRotation = MyRotato.transform.rotation;
         forse = target.transform.forward * m_shotSpeed;
         //Debug.Log(forse);
         //Debug.Log(i);

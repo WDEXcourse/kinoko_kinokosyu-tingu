@@ -24,6 +24,10 @@ public class PlayerArrowScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.tag == "ya2")
+        {
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -36,6 +40,10 @@ public class PlayerArrowScript : MonoBehaviour
             Destroy(this.gameObject);
         }
         if (collision.gameObject.tag == "field")
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "ya2")
         {
             Destroy(this.gameObject);
         }
