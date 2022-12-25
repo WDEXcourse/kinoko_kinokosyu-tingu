@@ -35,11 +35,11 @@ public class EnemyScript : MonoBehaviour
     }
     void ArrowAttack()
     {
-        GameObject EnemyArrows = Instantiate(EnemyArrow,this.transform.position,this.transform.rotation) as GameObject;
-        EnemyArrows.transform.position = this.transform.position + new Vector3(0,3,0);
+        GameObject EnemyArrows = Instantiate(EnemyArrow, this.transform.position, this.transform.rotation) as GameObject;
+        EnemyArrows.transform.position = this.transform.position + new Vector3(0, 3, 0);
         force = this.gameObject.transform.forward * ArrowSpeed;
         EnemyArrows.GetComponent<Rigidbody>().AddForce(force);
         Destroy(EnemyArrows.gameObject, 4);
-        
+
     }
 }
